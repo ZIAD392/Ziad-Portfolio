@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+        
+        
+<html lang="en-US" data-website-id="2" data-main-object="blog.post(1,)">
+    
+<!-- Mirrored from www.scandosolutions.com/blog/our-blog-1/how-to-design-chart-of-accounts-in-odoo-1 by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 02 Nov 2023 07:51:52 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <meta name="generator" content="Odoo"/>
+        <meta name="description" content="Odoo Best Practices"/>
+            
+        <meta property="og:type" content="article"/>
+        <meta property="og:title" content="How to design Chart of Accounts in Odoo"/>
+        <meta property="og:site_name" content="Scando Integrated Solutions"/>
+        <meta property="og:url" content="how-to-design-chart-of-accounts-in-odoo-1.html"/>
+        <meta property="og:image" content="../../unsplash/Ok76F6yW2iA/unsplash_Ok76F6yW2iA_finance9d32.jpg?unique=0e944c5e"/>
+        <meta property="og:description" content="Odoo Best Practices"/>
+        <meta property="article:published_time" content="2023-04-12 20:47:53"/>
+        <meta property="article:modified_time" content="2023-04-12 20:47:53.057596"/>
+            
+        <meta name="twitter:card" content="summary_large_image"/>
+        <meta name="twitter:title" content="How to design Chart of Accounts in Odoo"/>
+        <meta name="twitter:image" content="../../unsplash/Ok76F6yW2iA/unsplash_Ok76F6yW2iA_finance9d32.jpg?unique=0e944c5e"/>
+        <meta name="twitter:description" content="Odoo Best Practices"/>
+        
+        <link rel="canonical" href="how-to-design-chart-of-accounts-in-odoo-1.html"/>
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin=""/>
+        <title> How to design Chart of Accounts in Odoo | Scando </title>
+        <link type="image/x-icon" rel="shortcut icon" href="../../web/image/website/2/Scandofcbe?unique=0aebb0e"/>
+        <link rel="preload" href="../../web/static/src/libs/fontawesome/fonts/fontawesome-webfont3e6e.woff2?v=4.7.0" as="font" crossorigin=""/>
+        <link type="text/css" rel="stylesheet" href="../../web/assets/11191-9eefe96/2/web.assets_frontend.min.css" data-asset-bundle="web.assets_frontend" data-asset-version="9eefe96"/>
+        <script id="web.layout.odooscript" type="text/javascript">
+            var odoo = {
+                csrf_token: "5c88f1343946e9f0b32a36d5a5e8e2f826c64000o1730447468",
+                debug: "",
+            };
+        </script>
+        <script type="text/javascript">
+            odoo.__session_info__ = {"is_admin": false, "is_system": false, "is_website_user": true, "user_id": false, "is_frontend": true, "profile_session": null, "profile_collectors": null, "profile_params": null, "show_effect": true, "bundle_params": {"lang": "en_US", "website_id": 2}, "translationURL": "/website/translations", "cache_hashes": {"translations": "e16fda710c18d07b2be692e23403109b07bbbc6d"}, "geoip_country_code": "EG", "geoip_phone_code": 20, "lang_url_code": "en"};
+            if (!/(^|;\s)tz=/.test(document.cookie)) {
+                const userTZ = Intl.DateTimeFormat().resolvedOptions().timeZone;
+                document.cookie = `tz=${userTZ}; path=/`;
+            }
+        </script>
+        <script defer="defer" type="text/javascript" src="../../web/assets/10243-e14c648/2/web.assets_frontend_minimal.min.js" data-asset-bundle="web.assets_frontend_minimal" data-asset-version="e14c648"></script>
+        <script defer="defer" type="text/javascript" data-src="/web/assets/11192-ab7cdc8/2/web.assets_frontend_lazy.min.js" data-asset-bundle="web.assets_frontend_lazy" data-asset-version="ab7cdc8"></script>
+        
+        
+    </head>
+    <body>
+        <div id="wrapwrap" class="   ">
+                <header id="top" data-anchor="true" data-name="Header" class="  o_header_fade_out">
+                    
+                <div class="o_header_boxed_background o_colored_level o_cc pt8 pb8">
+            <div class="container d-flex align-items-center pb-4 flex-wrap">
+                
+                <div class="oe_structure oe_structure_solo" id="oe_structure_header_boxed_1">
+      <section class="s_text_block o_colored_level" data-snippet="s_text_block" name="Text" data-name="12" style="background-image: none;">
+        <div class="container">
+          <div class="s_social_media text-start o_not_editable" data-snippet="s_social_media" data-name="Social Media">
+            <h6 class="s_social_media_title d-none">Follow us</h6>
+            <a href="https://www.facebook.com/Scandointegratedsolutions?mibextid=LQQJ4d" class="s_social_media_facebook" target="_blank">
+              <i class="fa fa-facebook m-1"></i>
+            </a>
+            <a href="https://instagram.com/scandosolutions?igshid=YmMyMTA2M2Y=" class="s_social_media_instagram" target="_blank">
+              <i class="fa fa-instagram m-1"></i>
+            </a>
+            <a href="https://www.linkedin.com/company/scando-solutions/" class="s_social_media_linkedin" target="_blank">
+              <i class="fa m-1 fa-linkedin"></i>
+            </a>
+          </div>
+        </div>
+      </section>
+    </div>
+  <ul class="nav ms-auto flex-nowrap" contenteditable="false">
+                    
+            <li class="nav-item ms-lg-3 o_no_autohide_item">
+                <a href="../../web/login.html" class="nav-link fw-bold">Sign in</a>
+            </li>
+                    
+        
+        
+                </ul>
+                
+            </div>
+        </div>
+        <div id="top_menu_container" class="container mt-n4">
+    <nav data-name="Navbar" class="navbar navbar-expand-lg navbar-light o_colored_level o_cc shadow-sm rounded pe-2">
+        
+                
+    <a href="../../index.html" class="navbar-brand logo ">
+            
+            <span role="img" aria-label="Logo of Scando" title="Scando"><img src="../../web/image/website/2/logo/Scandofcbe.png?unique=0aebb0e" class="img img-fluid" width="95" height="40" alt="Scando" loading="lazy"/></span>
+        </a>
+    
+                
+  <button type="button" data-bs-toggle="collapse" data-bs-target="#top_menu_collapse" class="navbar-toggler ">
+    <span class="navbar-toggler-icon o_not_editable" contenteditable="false"></span>
+  </button>
+                
+                <div id="top_menu_collapse" class="collapse navbar-collapse">
+    <div class="o_offcanvas_menu_backdrop collapsed" data-bs-toggle="collapse" data-bs-target="#top_menu_collapse" aria-label="Toggle navigation"></div>
+    <ul id="top_menu" class="nav navbar-nav o_menu_loading mx-auto nav-pills">
+    <li class="o_offcanvas_menu_toggler order-first navbar-toggler text-end border-0 o_not_editable">
+      <a href="#top_menu_collapse" class="nav-link px-3 collapsed" data-bs-toggle="collapse" aria-expanded="false" data-bs-original-title="" title="">
+        <span class="fa-2x">×</span>
+      </a>
+    </li>
+        
+    <li class="nav-item">
+        <a role="menuitem" href="../../index.html" class="nav-link ">
+            <span>Home</span>
+        </a>
+    </li>
+    <li class="nav-item dropdown  ">
+        <a data-bs-toggle="dropdown" href="#" class="nav-link dropdown-toggle ">
+            <span>Services</span>
+        </a>
+        <ul class="dropdown-menu" role="menu">
+    <li class="">
+        <a role="menuitem" href="../../start-up.html" class="dropdown-item ">
+            <span>Start-up Studio</span>
+        </a>
+    </li>
+    <li class="">
+        <a role="menuitem" href="../../business-process-management.html" class="dropdown-item ">
+            <span>Business process Management</span>
+        </a>
+    </li>
+    <li class="">
+        <a role="menuitem" href="../../odoo.html" class="dropdown-item ">
+            <span> Odoo Services</span>
+        </a>
+    </li>
+        </ul>
+    </li>
+    <li class="nav-item">
+        <a role="menuitem" href="../../about-us.html" class="nav-link ">
+            <span>Company</span>
+        </a>
+    </li>
+    <li class="nav-item">
+        <a role="menuitem" href="../our-blog-1.html" class="nav-link ">
+            <span>Blog</span>
+        </a>
+    </li>
+    <li class="nav-item">
+        <a role="menuitem" href="../../careers.html" class="nav-link ">
+            <span>Careers</span>
+        </a>
+    </li>
+    <li class="nav-item">
+        <a role="menuitem" href="../../helpdesk/support-1.html" class="nav-link ">
+            <span>Help</span>
+        </a>
+    </li>
+                    
+    <li class="o_offcanvas_logo_container order-last navbar-toggler py-4 order-1 mt-auto text-center border-0">
+      <a href="../../index.html" class="o_offcanvas_logo logo">
+            <span role="img" aria-label="Logo of Scando" title="Scando"><img src="../../web/image/website/2/logo/Scandofcbe.png?unique=0aebb0e" class="img img-fluid" style="max-width: 200px" alt="Scando" loading="lazy"/></span>
+        </a>
+    </li>
+    </ul>
+                    
+                    
+        <div class="oe_structure oe_structure_solo ms-lg-3">
+            <section class="s_text_block" data-snippet="s_text_block" data-name="Text">
+                <div class="container">
+                    <a href="../../contactus.html" class="btn btn-primary btn_cta">Contact Us</a>
+                </div>
+            </section>
+        </div>
+                </div>
+            
+    </nav>
+        </div>
+    
+        </header>
+                <main>
+                    
+        <div id="wrap" class="js_blog website_blog">
+            
+
+        
+
+        <section id="o_wblog_post_top">
+            <div id="title" class="blog_header">
+    <div data-name="Blog Post Cover" style="background-color: #133D99;" data-use_size="True" data-use_filters="True" data-res-model="blog.post" data-res-id="1" class="o_record_cover_container d-flex flex-column h-100 o_colored_level o_cc o_cc1 o_cc o_half_screen_height o_record_has_cover  o_wblog_post_page_cover">
+        <div style="background-image: url(../../unsplash/Ok76F6yW2iA/unsplash_Ok76F6yW2iA_finance9d32.jpg?unique=0e944c5e);" class="o_record_cover_component o_record_cover_image o_we_snippet_autofocus"></div>
+        <div style="opacity: 0.6;" class="o_record_cover_component o_record_cover_filter oe_black"></div>
+        
+
+                    <div class="container text-center position-relative h-100 d-flex flex-column flex-grow-1 justify-content-around">
+                        <div class="o_wblog_post_title  ">
+                            <h1 id="o_wblog_post_name" class="o_editable_no_shadow" data-oe-expression="blog_post.name" placeholder="Blog Post Title" data-blog-id="1">How to design Chart of Accounts in Odoo</h1>
+                            <div id="o_wblog_post_subtitle" class="o_editable_no_shadow" placeholder="Subtitle">Odoo Best Practices</div>
+                        </div>
+                        <a id="o_wblog_post_content_jump" href="#o_wblog_post_main" class="css_editable_mode_hidden justify-content-center align-items-center rounded-circle mx-auto mb-5 text-decoration-none">
+                            <i class="fa fa-angle-down fa-3x text-white" aria-label="To blog content" title="To blog content"></i>
+                        </a>
+                    </div>
+                
+    </div>
+            </div>
+        </section>
+
+        <section id="o_wblog_post_main" class="container pt-4 pb-5 ">
+            
+
+            
+            <div class="o_container_small">
+                <div class="d-flex flex-column flex-lg-row">
+                    <div id="o_wblog_post_content" class=" o_container_small w-100 flex-shrink-0">
+    <nav aria-label="breadcrumb" class="breadcrumb flex-nowrap py-0 px-0 css_editable_mode_hidden mb-3 bg-transparent">
+        <li class="breadcrumb-item">
+            <a href="../our-blog-1.html">Our blog</a>
+        </li>
+        <li class="breadcrumb-item text-truncate active"><span>How to design Chart of Accounts in Odoo</span></li>
+    </nav>
+    <div data-editor-message="WRITE HERE OR DRAG BUILDING BLOCKS" class="o_wblog_post_content_field   o_wblog_read_text">
+            
+<p>
+</p>
+<p style="">If you are using Odoo for your accounting needs, you might be wondering how to code your chart of accounts in a way that is efficient, consistent, and easy to maintain. A chart of accounts (COA) is a list of all the accounts that you use to record your financial transactions, such as income, expenses, assets, liabilities, and equity. A well-designed COA can help you to organize your accounting data, generate accurate reports and comply with tax regulations.</p>
+<p style="">In this blog post, we will share some best practices for coding your chart of accounts in Odoo, based on our experience and research. We will cover the following topics:</p>
+<ul style=""><li style="">How to choose a numbering system for your accounts</li><li style="">How to group your accounts by type and category</li><li style="">How to use tags and taxes for your accounts</li><li style="">How to avoid common pitfalls and errors</li></ul>
+<b><h1 style="font-weight: normal;"><span style="font-size:20pt;background-color:transparent">Choosing a coding scheme for your accounts</span></h1></b>
+<p style="">A coding scheme is a system of assigning numbers or letters to your accounts, to make them easier to identify and classify. There are different types of coding schemes, such as numeric, alphanumeric, or hierarchical. The choice of coding scheme depends on your preferences, the size and complexity of your business, and the requirements of your local accounting standards.</p>
+<p style="">In Odoo, you can use any coding scheme you want, as long as it is consistent and unique for each account. However, we recommend using a numeric coding scheme, as it is simple, flexible, and widely used. A numeric coding scheme consists of assigning a series of digits to each account, following a logical order.</p>
+<b><h1 style="font-weight: normal;"><span style="font-size:20pt;background-color:transparent">Coding Chart of Accounts</span></h1></b>
+<p style="">One of the first decisions you need to make when coding your chart of accounts is how to assign numbers to your accounts. Odoo allows you to use any alphanumeric code for your accounts, but it is advisable to follow some conventions and standards to make your COA easy to read and understand.</p>
+<p style="">A common practice is to use a hierarchical numbering system, where the first digits of the code indicate the type of account (such as balance sheet or profit and loss), and the subsequent digits indicate the sub categories and subaccounts. For example, you could use the following rules:</p>
+<ul style=""><li style="">The first digit indicates the account type (1 for assets, 2 for liabilities, 3 for equity, 4 for income, and 5 for expenses)</li><li style="">The second digit indicates the account group (for example, 11 for current assets, 12 for non-current assets)</li><li style="">The third and fourth digits indicate the account sub-group (for example, 1110 for cash and bank accounts, 1120 for receivables)</li><li style="">The fifth and sixth digits indicate the account number (for example, 111001 for the main bank account, 111002 for petty cash)</li></ul>
+<p style="">Using this coding scheme, you can easily identify and classify your accounts by looking at their codes. For example, if you see an account with code 521001, you know that it is an expense account (5), related to the cost of revenue (52), and it is the first account in that sub-group (1001).</p>
+<p style="">Below is an example of a coding structure:</p>
+<ul style=""><li style="">1xxx: Assets</li><ul style=""><li style="">11xx: Current assets</li><ul style=""><li style="">111x: Cash and bank</li><li style="">112x: Accounts receivable</li><li style="">113x: Inventory</li><li style="">…</li></ul><li style="">12xx: Non-current assets</li><ul style=""><li style="">121x: Fixed assets</li><li style="">122x: Intangible assets</li><li style="">…</li></ul></ul><li style="">2xxx: Liabilities</li><ul style=""><li style="">21xx: Current liabilities</li><ul style=""><li style="">211x: Accounts payable</li><li style="">212x: Taxes payable</li><li style="">…</li></ul><li style="">22xx: Non-current liabilities</li><ul style=""><li style="">221x: Loans payable</li><li style="">222x: Deferred revenue</li><li style="">…</li></ul></ul><li style="">3xxx: Equity</li><ul style=""><li style="">31xx: Capital</li><li style="">32xx: Retained earnings</li></ul><li style="">4xxx: Income</li><ul style=""><li style="">41xx: Sales revenue</li><li style="">42xx: Other income</li></ul><li style="">5xxx: Expenses</li><ul style=""><li style="">51xx: Cost of goods sold</li><li style="">52xx: Operating expenses</li><ul style=""><li style="">521x: Salaries and wages</li><li style="">522x: Rent and utilities</li><li style="">…</li></ul><li style="">53xx: Depreciation and amortization</li><li style="">54xx: Interest expense</li></ul></ul>
+<p style="">The advantages of using a hierarchical numbering system are:</p>
+<ul style=""><li style="">It makes it easy to identify the type and category of an account by looking at its code.</li><li style="">It allows you to create subaccounts by adding more digits to the code, without changing the existing codes.</li><li style="">It facilitates the sorting and grouping of accounts in reports and statements.</li></ul>
+<p style="">However, there are also some drawbacks to using a hierarchical numbering system, such as:</p>
+<ul style=""><li style="">It can be confusing if you have too many levels or digits in your codes.</li><li style="">It can be difficult to insert new accounts or reclassify existing accounts if you run out of numbers in a category.</li><li style="">It can be inconsistent if you use different codes for similar accounts in different companies or countries.</li></ul>
+<p style="">To avoid these problems, you should follow some guidelines when choosing a numbering system for your chart of accounts:</p>
+<ul style=""><li style="">Use a consistent number of digits for each level of your hierarchy. For example, if you use four digits for your main categories, use four digits for all your subcategories and subaccounts as well.</li><li style="">Leave some gaps between your numbers to allow for future expansion or changes. For example, if you use increments of 10 for your subcategories, you will have nine numbers available for each subcategory.</li><li style="">Use meaningful codes that reflect the nature and purpose of your accounts. For example, avoid using generic codes like "Miscellaneous" or "Other".</li><li style="">Align your codes with the accounting standards and practices of your industry and jurisdiction. For example, if you operate in multiple countries, you may need to adapt your codes to comply with local tax laws and reporting requirements.</li></ul>
+<b><h1 style="font-weight: normal;"><span style="font-size:20pt;background-color:transparent">Using account types and groups to organize your accounts</span></h1></b>
+<p style="">Account types and groups are two features in Odoo that help you organize your chart of accounts and generate accurate financial reports. Account types are predefined categories that indicate the nature and function of an account. For example, some of the account types in Odoo are:</p>
+<ul style=""><li style="">Current assets: assets that are expected to be converted into cash or consumed within one year</li><li style="">Receivable: assets that represent amounts owed by customers or other parties</li><li style="">Bank and cash: assets that represent cash on hand or in bank accounts</li><li style="">Current liabilities: liabilities that are due within one year</li><li style="">Payable: liabilities that represent amounts owed to suppliers or other parties</li><li style="">Equity: the owner's share of the business</li><li style="">Income: revenues generated from selling goods or services</li><li style="">Expenses: costs incurred from running the business</li></ul>
+<p style="">Account types are important because they determine how an account is treated in the accounting system. For example, an account with the type "Receivable" will automatically generate a journal entry when an invoice is validated, and will appear in the aged receivable report. An account with the type "Income" will increase the profit and loss statement when credited, and will appear in the income statement report.</p>
+<p style="">Account groups are custom categories that allow you to group similar accounts. For example, you can create an account group called "Sales" and assign all your income accounts related to sales to that group. Account groups are useful because they help you hierarchically structure your chart of accounts, and they allow you to create subtotals and drill-downs in your financial reports.</p>
+<p style="">By following these best practices in Odoo 16, you can optimize your accounting system and gain more insights into your financial performance. If you need any assistance with designing your COA in Odoo 16, feel free to <a href="../../contactus.html">contact us</a> at hello@scando.solutions. We are happy to help!</p>
+<b><br><br></b>
+
+​</div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="o_wblog_post_footer">
+        <div class="mt-5">
+                <div id="o_wblog_next_container" class="d-flex flex-column">
+    <div data-name="Cover" style="background-color: #1644AB;" data-use_filters="True" data-res-model="blog.post" data-res-id="2" class="o_record_cover_container d-flex flex-column h-100 o_colored_level o_cc o_cc1 o_cc   o_wblog_post_page_cover o_wblog_post_page_cover_footer o_record_has_cover">
+        <div style="background-image: url(../../unsplash/LqKhnDzSF-8/unsplash_LqKhnDzSF-8_business%20process%20integrationsaf92.jpg?unique=fdc99521);" class="o_record_cover_component o_record_cover_image "></div>
+        <div style="opacity: 0.2;" class="o_record_cover_component o_record_cover_filter oe_black"></div>
+        
+
+                        <a id="o_wblog_next_post_info" class="d-none" data-size="o_half_screen_height o_record_has_cover" data-url="/blog/our-blog-1/business-process-integration-2?anim"></a>
+
+
+                        <div class="container text-center position-relative h-100 d-flex flex-column flex-grow-1 justify-content-around">
+                            <div class="o_wblog_post_title">
+                                <div id="o_wblog_post_name" placeholder="Blog Post Title" class="h1" data-blog-id="2">Business Process Integration</div>
+                                
+                            </div>
+
+                            <div class="o_wblog_toggle ">
+                                <span class="h4 d-inline-block py-1 px-2 rounded-1 text-white">
+                                    <i class="fa fa-angle-right fa-3x text-white" aria-label="Read next" title="Read Next"></i>
+                                </span>
+                            </div>
+
+                            
+                            <div class="o_wblog_next_loader o_wblog_toggle justify-content-center align-items-center mx-auto position-relative d-none">
+                                <div class="rounded-circle bg-black-50"></div>
+                            </div>
+                        </div>
+                    
+    </div>
+                </div>
+        </div></section>
+    
+
+            
+            <div class="oe_structure oe_empty oe_structure_not_nearest" id="oe_structure_blog_footer" data-editor-sub-message="Visible in all blogs&#39; pages"></div>
+        </div>
+    
+                </main>
+                <footer id="bottom" data-anchor="true" data-name="Footer" class="o_footer o_colored_level o_cc  o_footer_slideout">
+                    <div id="footer" class="oe_structure oe_structure_solo">
+      <section class="s_text_block pt48" data-snippet="s_text_block" data-name="Text" style="background-image: none;">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-3 pb24 o_colored_level">
+              <h4><b>Designed</b><br/>for Companies</h4>
+            </div>
+            <div class="col-lg-9 pb24 o_colored_level">
+              <p class="lead">We are a team of passionate people whose goal is to improve everyone's life.<br/>Our services are designed for small to medium size companies.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="s_text_block" data-snippet="s_text_block" data-name="Text" style="background-image: none;">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-lg-3 pb24 o_colored_level" style="">
+              <ul class="ps-3 mb-0">
+                <li>
+                  <a href="../../index.html" data-bs-original-title="" title="">
+                    <font class="text-o-color-4">Home</font>
+                  </a>
+                </li>
+                <li>
+                
+                  
+                  
+                 &nbsp;<a href="../../services.html" data-bs-original-title="" title=""><font class="text-o-color-4">S​ervices&nbsp;​</font></a><font class="text-o-color-4">​</font></li>
+                <li>
+                  <a href="../../odoo.html" data-bs-original-title="" title="">
+                    <font class="text-o-color-4">Odoo</font>
+                  </a>
+                </li>
+                <li>
+                  <a href="../../business-process-management.html" data-bs-original-title="" title="">
+                    <font class="text-o-color-4">BPM</font>
+                  </a>
+                </li>
+                <li>
+                  <a href="../../start-up.html" data-bs-original-title="" title="">
+                    <font class="text-o-color-4">Start-up studios​</font>
+                  </a>
+                  <br/>
+                </li>
+              </ul>
+            </div>
+            <div class="col-lg-6 pb24 o_colored_level" style="">
+              <ul class="list-unstyled mb-0">
+                <li>
+                  <i class="fa fa-phone fa-fw me-2"></i>
+                  <span class="o_force_ltr">
+                    <a href="tel:+20 114 777 4294" data-bs-original-title="" title="">
+                      <font class="text-o-color-4">+20 155&nbsp;117 0883</font></a>
+                  </span>
+                </li>
+                <li>
+                  <i class="fa fa-envelope fa-fw me-2"></i>
+                  <span>
+                    <a href="mailto:hello@scandosolutions.com" data-bs-original-title="" title="">
+                      <font class="text-o-color-4">hello@scandosolutions.com</font>
+                    </a>
+                  </span>
+                </li>
+                <li>&nbsp;<span class="fa fa-map-pin"></span>&nbsp; &nbsp;&nbsp;<a href="https://goo.gl/maps/LkLB2CBKTHK1LKwz9" data-bs-original-title="" title="" aria-describedby="popover135799"><font class="text-o-color-4">10072 El-Mearag Zahraa El-Maadi Cairo Egypt</font></a></li>
+              </ul>
+            </div>
+            <div class="col-lg-3 pb24 o_colored_level">
+              <div class="s_social_media text-end o_not_editable" data-snippet="s_social_media" data-name="Social Media" contenteditable="false">
+                <h5 class="s_social_media_title d-none">Follow Us</h5>
+                <a href="https://www.facebook.com/Scandointegratedsolutions?mibextid=LQQJ4d" class="s_social_media_facebook" target="_blank">
+                  <i class="fa fa-1x fa-facebook rounded-circle shadow-sm o_editable_media"></i>
+                </a>
+                <a href="https://instagram.com/scandosolutions?igshid=YmMyMTA2M2Y=" class="s_social_media_instagram" target="_blank">
+                  <i class="fa fa-1x fa-instagram rounded-circle shadow-sm o_editable_media"></i>
+                </a>
+                <a href="https://www.linkedin.com/company/scando-solutions/" class="s_social_media_linkedin" target="_blank">
+                  <i class="fa fa-1x rounded-circle shadow-sm fa-linkedin o_editable_media"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  <div class="o_footer_copyright o_colored_level o_cc" data-name="Copyright">
+                        <div class="container py-3">
+                            <div class="row">
+                                <div class="col-sm text-center text-sm-start text-muted">
+                                    <span class="o_footer_copyright_name me-2">Copyright ©&nbsp;Scando Integrated Solution</span>
+        
+        
+                                </div>
+                                <div class="col-sm text-center text-sm-end o_not_editable">
+        <div class="o_brand_promotion">
+        Powered by 
+            <a target="_blank" class="badge text-bg-light" href="http://www.odoo.com/?utm_source=db&amp;utm_medium=portal">
+                <img alt="Odoo" src="../../web/static/img/odoo_logo_tiny.png" width="62" height="20" style="width: auto; height: 1em; vertical-align: baseline;" loading="lazy"/>
+            </a>
+        - 
+                    An awesome <a target="_blank" href="https://www.odoo.com/app/crm?utm_source=db&amp;utm_medium=portal">Open Source CRM</a>
+                
+        </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+            <script id="tracking_code" async="1" src="https://www.googletagmanager.com/gtag/js?id=G-0100Z369KG"></script>
+            <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', 'G-0100Z369KG');
+            </script>
+            <script id="plausible_script" name="plausible" defer="defer" data-domain="scando-sol.odoo.com-e509" src="../../../download.odoo.com/js/plausi_saas.js"></script>
+        
+        </body>
+
+<!-- Mirrored from www.scandosolutions.com/blog/our-blog-1/how-to-design-chart-of-accounts-in-odoo-1 by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 02 Nov 2023 07:51:54 GMT -->
+</html>
