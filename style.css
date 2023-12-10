@@ -388,7 +388,7 @@ h1 {
 .service a {
   display: block;
   background-color: #007bff;
-  color: #fff;
+  color: #001935;
   padding: 10px;
   text-decoration: none;
   margin-top: 20px;
@@ -479,7 +479,7 @@ a:link,
 a:visited {
   text-decoration: none;
   border: #007bff;
-  color: #FFFFFF;
+  color: #001935;
   text-align: center;
   margin: 5px;
   font-size: 16px;
@@ -497,8 +497,8 @@ a:hover {
 .social a:visited,
 .social a:link {
   text-decoration: none;
-  border: #001935;
-  color: #FFFFFF;
+  border: #FFFFFF;
+  color: #001935;
   text-align: center;
   margin: 5px;
 
