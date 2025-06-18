@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Ziad Al-Masry – Content Creation Portfolio</title>
+  <meta name="description" content="Portfolio of Ziad Al-Masry, showcasing content creation projects including LinkedIn and YouTube channel management, website content, and technical documentation.">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
   <style>
@@ -34,18 +35,21 @@
     .card-footer{padding:.8rem 1rem;background:var(--bg-light);text-align:right;}
     .card-footer a{text-decoration:none;color:var(--accent);font-weight:500;}
   </style>
+  <!-- Add your favicon here -->
+  <!-- <link rel="icon" href="favicon.ico" type="image/x-icon"> -->
+  <!-- <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"> -->
 </head>
 <body>
   <div class="container">
     <header>
       <h1>Ziad Mahmoud Al-Masry</h1>
       <p>Content Creation Portfolio | <a href="mailto:ziadmasri2122@gmail.com">ziadmasri2122@gmail.com</a></p>
-      <span>| 🔗 <a href="https://ziad392.github.io/Ziad-Portfolio/ziad-cv.html" style="color:#4a90e2;">Ziad's CV</a></span>
+      <p class="cv-link-container">🔗 <a href="https://ziad392.github.io/Ziad-Portfolio/ziad-cv.html" style="color:var(--primary);">View Ziad's CV</a></p>
     </header>
     <div class="grid">
       <!-- Odoo School LinkedIn -->
-      <div class="card">
-        <div class="card-header"><i class="fab fa-linkedin"></i>Odoo School LinkedIn</div>
+      <article class="card">
+        <div class="card-header"><i class="fab fa-linkedin" aria-hidden="true"></i>Odoo School LinkedIn</div>
         <div class="card-body">
           <h3>Engage & Grow</h3>
           <p>Carousels, testimonials & articles.</p>
@@ -56,10 +60,10 @@
           </ul>
         </div>
         <div class="card-footer"><a href="https://www.linkedin.com/company/odooschool" target="_blank">Visit Page</a></div>
-      </div>
+      </article>
       <!-- Odoo School YouTube -->
-      <div class="card">
-        <div class="card-header"><i class="fab fa-youtube"></i>Odoo School YouTube</div>
+      <article class="card">
+        <div class="card-header"><i class="fab fa-youtube" aria-hidden="true"></i>Odoo School YouTube</div>
         <div class="card-body">
           <h3>Educate & Impress</h3>
           <p>Tutorials & quick-hacks.</p>
@@ -70,10 +74,10 @@
           </ul>
         </div>
         <div class="card-footer"><a href="https://www.youtube.com/@odoo_school" target="_blank">Watch Channel</a></div>
-      </div>
+      </article>
       <!-- Scando Solutions LinkedIn -->
-      <div class="card">
-        <div class="card-header"><i class="fab fa-linkedin"></i>Scando Solutions LinkedIn</div>
+      <article class="card">
+        <div class="card-header"><i class="fab fa-linkedin" aria-hidden="true"></i>Scando Solutions LinkedIn</div>
         <div class="card-body">
           <h3>Lead Generation</h3>
           <p>Case studies & insights.</p>
@@ -84,10 +88,10 @@
           </ul>
         </div>
         <div class="card-footer"><a href="https://www.linkedin.com/company/scandosolutions" target="_blank">Visit Page</a></div>
-      </div>
+      </article>
       <!-- Scando Solutions Website -->
-      <div class="card">
-        <div class="card-header"><i class="fas fa-globe"></i>Scando Solutions Site</div>
+      <article class="card">
+        <div class="card-header"><i class="fas fa-globe" aria-hidden="true"></i>Scando Solutions Site</div>
         <div class="card-body">
           <h3>Showcase Success</h3>
           <p>Blog & guides.</p>
@@ -98,10 +102,10 @@
           </ul>
         </div>
         <div class="card-footer"><a href="https://scandosolutions.com" target="_blank">Visit Site</a></div>
-      </div>
+      </article>
       <!-- Asis-Tech Odoo Portal -->
-      <div class="card">
-        <div class="card-header"><i class="fas fa-cogs"></i>Asis-Tech Portal</div>
+      <article class="card">
+        <div class="card-header"><i class="fas fa-cogs" aria-hidden="true"></i>Asis-Tech Portal</div>
         <div class="card-body">
           <h3>Empower Users</h3>
           <p>Demos & KB.</p>
@@ -112,10 +116,10 @@
           </ul>
         </div>
         <div class="card-footer"><a href="https://scandosolutions-asis-tech.odoo.com" target="_blank">Explore</a></div>
-      </div>
+      </article>
       <!-- ArtisanCraft Instagram -->
-      <div class="card">
-        <div class="card-header"><i class="fab fa-instagram"></i>ArtisanCraft Insta</div>
+      <article class="card">
+        <div class="card-header"><i class="fab fa-instagram" aria-hidden="true"></i>ArtisanCraft Insta</div>
         <div class="card-body">
           <h3>Build with Us</h3>
           <p>High-quality construction highlights.</p>
@@ -126,10 +130,10 @@
           </ul>
         </div>
         <div class="card-footer"><a href="https://www.instagram.com/artisancraft.construction/?igsh=eTU5aHRkbm9mdXlt#" target="_blank">View Profile</a></div>
-      </div>
+      </article>
       <!-- ArtisanCraft Website -->
-      <div class="card">
-        <div class="card-header"><i class="fas fa-palette"></i>ArtisanCraft Site</div>
+      <article class="card">
+        <div class="card-header"><i class="fas fa-palette" aria-hidden="true"></i>ArtisanCraft Site</div>
         <div class="card-body">
           <h3>Innovate & Sustain</h3>
           <p>Architecture, management, and green solutions.</p>
@@ -140,7 +144,7 @@
           </ul>
         </div>
         <div class="card-footer"><a href="https://www.artisancraft.net" target="_blank">Visit Site</a></div>
-      </div>
+      </article>
     </div>
   </div>
 </body>
