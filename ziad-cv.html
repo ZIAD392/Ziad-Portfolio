@@ -7,7 +7,7 @@
   <title>Ziad Al-Masry - CV</title>
   <style>
     body {
-      font-family: Arial, Helvetica, sans-serif;
+      font-family: Arial, 'Times New Roman', ;
       margin: 0;
       padding: 0;
       color: #333;
@@ -27,7 +27,6 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      /* text-align: center; */
     }
 
     header h1 {
@@ -36,52 +35,23 @@
       display: flex;
     }
 
-    /* Reverted: Styles for the overall wrapper of contact links */
-    /* .contact-links-wrapper {
-      display: flex;
-      justify-content: center;
-      gap: 1rem;
-      width: 100%;
-      flex-wrap: wrap;
-      margin-top: 0.5rem;
-    } */
-
     .contact-links {
       font-size: 1rem;
       color: #555;
       display: flex;
-      justify-content: center; /* Center items within each .contact-links div */
-      gap: 1rem; /* Gap between items in a single .contact-links div */
-      flex-wrap: wrap; /* Allow items within a .contact-links div to wrap */
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
     }
 
     .contact-links a {
-      color: #0056b3; /* Adjusted for better contrast */
+      color: #4a90e2;
       text-decoration: none;
-    }
-
-    .contact-links span { /* Add some spacing around pipes if they remain */
-      margin: 0 0.25rem;
-    }
-
-    .contact-links a[href^="tel:"], .contact-links a[href^="mailto:"] {
-      color: #0056b3; /* Ensure consistency */
-    }
-
-    .contact-links a[href*="google.com/maps"] { /* Style for maps link */
-        color: #00142b;
-    }
-
-    .social-links { /* Specific class for social links container */
-      display: flex;
-      gap: 1rem;
-      align-items: center; /* Vertically align icons if they have different heights */
     }
 
     .social-icon svg {
       width: 24px;
       height: 24px;
-      vertical-align: middle; /* Better alignment with any surrounding text/elements */
     }
 
     section {
@@ -95,14 +65,6 @@
       border-bottom: 1px solid #333;
       padding-bottom: 0.3rem;
       margin: 0.3rem 0;
-    }
-
-    .job-entry { /* Added rule for consistent margin */
-      margin-bottom: 1rem;
-    }
-
-    .job-entry:last-child { /* Remove margin from last job entry in a section */
-        margin-bottom: 0;
     }
 
     .job-entry h3 {
@@ -132,152 +94,6 @@
     .info-item {
       flex: 1 1 45%;
     }
-
-    /* Responsive Design Adjustments */
-    @media (max-width: 768px) {
-      .contact-links {
-        flex-direction: column; /* Stack contact items vertically */
-        align-items: center; /* Center items when stacked */
-        gap: 0.5rem; /* Reduce gap for stacked items */
-      }
-
-      .contact-links span:not(:last-child)::after { /* Optional: remove pipes or add line breaks for stacked view */
-        content: ""; /* Removes the pipe separators */
-        display: none;
-      }
-
-      .contact-links span {
-        margin: 0; /* Reset margins for stacked items */
-      }
-
-      .info-grid {
-        flex-direction: column; /* Stack info items vertically */
-      }
-
-      .info-item {
-        flex-basis: 100%; /* Make info items take full width when stacked */
-      }
-
-      header h1 {
-        font-size: 1.6rem; /* Slightly reduce heading size */
-      }
-
-      h2 {
-        font-size: 1.1rem; /* Slightly reduce section title size */
-      }
-
-      body {
-        font-size: 10pt; /* Adjust base font size for smaller screens */
-      }
-    }
-
-    @media (max-width: 480px) {
-      .container {
-        width: 98%; /* Use more screen width on very small devices */
-        padding: 1rem 0;
-      }
-
-      header h1 {
-        font-size: 1.4rem;
-      }
-
-      .contact-links {
-        font-size: 0.9rem;
-      }
-
-      ul {
-        padding-left: 1rem; /* Reduce padding for lists */
-      }
-    }
-
-    /* Print Styles */
-    @media print {
-      body {
-        font-family: 'Times New Roman', Times, serif; /* Common print font */
-        font-size: 10pt;
-        color: #000;
-        background-color: #fff; /* Ensure white background */
-      }
-
-      .container {
-        width: 100%;
-        margin: 0;
-        padding: 0;
-        box-shadow: none; /* Remove any shadows */
-      }
-
-      header, section {
-        background: #fff !important; /* Override section background for print */
-        border: none; /* Remove borders if any for cleaner print */
-        padding: 0.5rem 0;
-      }
-
-      header h1 {
-        font-size: 1.8rem;
-      }
-
-      h2 {
-        font-size: 1.2rem;
-        border-bottom: 1px solid #000; /* Ensure border is black */
-      }
-
-      a {
-        color: #000 !important; /* Make all links black for print */
-        text-decoration: none; /* Remove underline by default */
-      }
-
-      a[href]:after {
-        content: " (" attr(href) ")"; /* Show URLs next to links */
-        font-size: 0.9em;
-        font-style: italic;
-      }
-
-      /* Specific overrides for contact links in print */
-      .contact-links a[href^="tel:"]:after,
-      .contact-links a[href^="mailto:"]:after,
-      .contact-links a[href*="ziad-portfolio.html"]:after {
-        content: ""; /* Do not show the href for these specific links */
-      }
-
-      /* Adjusting print style for .contact-links to ensure they try to stay in a row */
-      .contact-links-wrapper .contact-links, /* If .contact-links-wrapper is used */
-      header > .contact-links { /* If .contact-links are direct children of header */
-        /* This might be tricky if they were meant to be separate lines before.
-           The original structure had two .contact-links divs.
-           We want the *content* of the first .contact-links div to be on one line.
-        */
-      }
-
-      /* Ensure items within the primary contact-links div are in a row for print */
-      .contact-links-wrapper > .contact-links:first-child,
-      header > .contact-links-wrapper > .contact-links:first-child { /* Targeting the first contact link group */
-        flex-direction: row !important;
-        justify-content: center !important; /* Or flex-start if preferred */
-        gap: 1rem !important;
-      }
-
-      .contact-links-wrapper > .contact-links:first-child span,
-      header > .contact-links-wrapper > .contact-links:first-child span {
-        margin: 0 0.25rem !important;
-      }
-
-
-      /* Hide elements not essential for print if any - for a CV, most are essential */
-      /* .social-icon svg { display: none; } */ /* Example: if icons are not needed */
-
-      /* This rule for pipes should apply to the first contact-links div if that's the desired outcome */
-      .contact-links-wrapper > .contact-links:first-child span:not(:last-child)::after,
-      header > .contact-links-wrapper > .contact-links:first-child span:not(:last-child)::after {
-        content: " | ";
-        display: inline;
-        margin: 0 0.5em;
-      }
-
-      /* If SVGs don't print well, consider hiding them or providing text fallbacks if not already clear */
-       .social-icon svg {
-        fill: #000 !important; /* Make SVGs black */
-      }
-    }
   </style>
 </head>
 
@@ -285,16 +101,18 @@
   <div class="container">
     <header>
       <h1>Ziad Mahmoud Al-Masry</h1>
-      <!-- Reverted to original structure with two .contact-links divs -->
-      <div class="contact-links-wrapper">
+      <div class="contact-links-wrapper" style="display: flex; justify-content: center; gap: 1rem; width: 100%;">
         <div class="contact-links">
-          <span>📞 <a href="tel:+201068202083">+20 106 820 2083</a></span>
-          <span>| 📧 <a href="mailto:ziadmasi2122@gmail.com">ziadmasi2122@gmail.com</a></span>
-          <span>| 🔗<a href="https://ziad392.github.io/Ziad-Portfolio/ziad-portfolio.html"> View My Portfolio</a></span>
-          <span>| 📍 Cairo, Egypt 🇪🇬</span>
+          <span>📞 <a href="tel:+201068202083" style="color:#4a90e2;">+20 106 820 2083</a></span>
+          <span>| 📧 <a href="mailto:ziadmasi2122@gmail.com" style="color:#4a90e2;">ziadmasi2122@gmail.com</a></span>
+          <span>| 🔗<a href="https://ziad392.github.io/Ziad-Portfolio/ziad-portfolio.html" style="color:#4a90e2;"> View
+              My Portfolio</a></span>
+          <span>| 📍<a
+              href="https://www.google.com/maps/place/Cairo,+Cairo+Governorate/@30.059482,31.2172646,13z/data=!3m1!4b1!4m6!3m5!1s0x14583fa60b21beeb:0x79dfb296e8423bba!8m2!3d30.0444196!4d31.2357116!16zL20vMDF3MnY?entry=ttu&g_ep=EgoyMDI1MDYwMS4wIKXMDSoASAFQAw%3D%3D"
+              style="color:#00142b; text-decoration: none;">Cairo, Egypt 🇪🇬</a></span>
         </div>
-        <div class="contact-links"> <!-- This div now specifically for social links -->
-          <span class="social-links"> <!-- Kept this span for direct styling of social icons if needed -->
+        <div class="contact-links">
+          <span class="social-links">
             <a href="https://www.linkedin.com/in/z-masry" class="social-icon">
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#0A66C2" class="bi bi-linkedin"
                 viewBox="0 0 16 16">
@@ -315,76 +133,57 @@
     </header>
     <section>
       <h2>Professional Summary</h2>
-      <p>Results-oriented Project Manager with over 3 years of experience successfully delivering complex Odoo ERP
-        implementations across logistics, retail, and education sectors. Demonstrates a proven track record in effective
-        cross-functional team coordination, agile project execution, and clear stakeholder communication to achieve key
-        business objectives.</p>
+      <p>Accomplished Project Manager with 3+ years of experience delivering Odoo ERP implementations in logistics,
+        retail, and education sectors. Proven track record in cross-functional coordination, agile project execution,
+        and stakeholder communication.</p>
     </section>
 
     <section>
       <h2>Education</h2>
       <ul>
-        <li>
-          <article>
-            <strong>Helwan University, Cairo, Egypt</strong> – M.A. Heritage Conservation & Site Management (Expected
-            2025)
-          </article>
-        </li>
-        <li>
-          <article>
-            <strong>Helwan University, Cairo, Egypt</strong> – B.A. Tourism & Hotels / Heritage & Museum Management
-            (2022)
-          </article>
-        </li>
-        <li>
-          <article>
-            <strong>EC Language School, Cape Town, South Africa</strong> – Upper Intermediate Intensive English Course
-            (2017)
-          </article>
-        </li>
-        <li>
-          <article>
-            <strong>Dar Althikr School, Jeddah, KSA</strong> – High School Diploma (2017)
-          </article>
-        </li>
+        <li><strong>Helwan University, Cairo, Egypt</strong> – M.A. Heritage Conservation & Site Management (Expected
+          2025)</li>
+        <li><strong>Helwan University, Cairo, Egypt</strong> – B.A. Tourism & Hotels / Heritage & Museum Management
+          (2022)</li>
+        <li><strong>EC Language School, Cape Town, South Africa</strong> – Upper Intermediate Intensive English Course
+          (2017)</li>
+        <li><strong>Dar Althikr School, Jeddah, KSA</strong> – High School Diploma (2017)</li>
       </ul>
     </section>
 
     <section>
       <h2>Work Experience</h2>
-      <article class="job-entry">
+      <div class="job-entry">
         <h3>Odoo Functional Consultant / Project Coordinator – Scando Integrated Solutions (Dec 2022 – Present)</h3>
         <p>Leading end-to-end ERP implementation projects using Odoo, coordinating teams and stakeholders.</p>
         <ul>
-          <li>Managed 8+ full-cycle Odoo ERP implementations, improving business processes.</li>
-          <li>Authored comprehensive project charters, including action plans, deliverables, timelines, stakeholder
-            analyses, and responsibility matrices. Monitored project progress via robust communication plans and regular
-            progress reports, ensuring timely task completion and alignment with objectives.</li>
-          <li>Led cross-functional teams utilizing Jira, Odoo, and ClickUp to effectively track project milestones and
-            KPIs, fostering collaboration and transparency.</li>
-          <li>Minimized project delays by implementing refined resource allocation strategies, proactive risk mitigation
-            plans, and meticulous change request management.</li>
+          <li>Managed 8+ full-cycle Odoo ERP implementations, improving business processe</li>
+          <li>Developed project Charter detailing action plan, deliverables, timelines, stakeholders analysis, and
+            responsibility, Monitored progress through a communication plan and progress reports to ensure timely task
+            completion.</li>
+          <li>Led cross-functional teams using Jira, Odoo, and ClickUp to track milestones and KPIs</li>
+          <li>Reduced delays through refined resource allocation and risk mitigation plans and Change Requist reports.
+          </li>
         </ul>
-      </article>
-      <article class="job-entry">
+      </div>
+      <div class="job-entry">
         <h3>Content Creator / Video Editor – Odoo School (Nov 2024 – Present)</h3>
         <p>Developing multimedia content and contact resources to support Odoo learning programs.</p>
         <ul>
           <li>Produced tutorial videos that reached an average of 1.3K views and improved CTR by 18%.</li>
-          <li>Scripted and edited engaging educational content, ensuring alignment with instructional goals and
-            optimizing for SEO to enhance reach and impact.</li>
+          <li>CScripted and edited educational content, aligning with instructional goals and SEO strategies.</li>
           <li>Developed LinkedIn posts increasing engagement and visibility by 45%.</li>
         </ul>
-      </article>
-      <article class="job-entry">
+      </div>
+      <div class="job-entry">
         <h3>Camp Counselor – Wellspring Egypt (Jul 2021 – Present, Freelance)</h3>
         <p>Facilitating summer camp programs and ensuring a safe, engaging environment for participants.</p>
         <ul>
           <li>Planned and led daily activities for groups of up to 30 children, prioritizing their needs and safety.
           </li>
         </ul>
-      </article>
-      <article class="job-entry">
+      </div>
+      <div class="job-entry">
         <h3>Tour Guide – Explorers Tourism (Apr 2021 – May 2025, Freelance)</h3>
         <p>Delivering engaging tours and cultural experiences across key Egyptian heritage sites.</p>
         <ul>
@@ -392,27 +191,27 @@
           <li>Researched and narrated historical, cultural, and architectural insights.</li>
           <li>Coordinated logistics with hotels, transport, and local vendors.</li>
         </ul>
-      </article>
-      <article class="job-entry">
+      </div>
+      <div class="job-entry" style="margin-bottom: 1rem;">
         <h3>Customer Service Agent – Vodafone Egypt (Oct 2019 – Jun 2021)</h3>
         <p>Responding to customer inquiries and resolving billing, technical, and service issues.</p>
         <ul>
           <li>Handled an average of 80+ calls per day with a 95% satisfaction rate.</li>
           <li>Provided product recommendations, upselling services and promotions.</li>
         </ul>
-      </article>
-      <article class="job-entry">
+      </div>
+      <div class="job-entry">
         <h3>Tele-Sales Agent – Etisalat Egypt (Aug 2018 – Oct 2019)</h3>
         <p>Achieving sales targets through proactive outreach and customer relationship building.</p>
         <ul>
           <li>Cold-called 75+ leads daily, converting 18% into new contracts.</li>
           <li>Maintained CRM records and followed up on sales opportunities.</li>
         </ul>
-      </article>
-      <article class="job-entry">
+      </div>
+      <div class="job-entry">
         <h3>Store Keeper – El-Arby Decoration Shop (Jan 2019 – Apr 2019)</h3>
         <p>Managing inventory operations and ensuring accurate stock records.</p>
-      </article>
+      </div>
     </section>
 
     <section>
