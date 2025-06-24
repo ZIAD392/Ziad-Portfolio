@@ -231,11 +231,28 @@
         font-style: italic;
       }
 
+      /* Specific overrides for contact links in print */
+      .contact-links a[href^="tel:"]:after,
+      .contact-links a[href^="mailto:"]:after,
+      .contact-links a[href*="ziad-portfolio.html"]:after {
+        content: ""; /* Do not show the href for these specific links */
+      }
+
+      .contact-info-wrapper .contact-links {
+        flex-direction: row !important; /* Ensure they stay in a row for print */
+        justify-content: center !important;
+        gap: 1rem !important; /* Restore gap for print if it was changed by responsive styles */
+      }
+
+      .contact-links span {
+        margin: 0 0.25rem !important; /* Restore original margins for print */
+      }
+
       /* Hide elements not essential for print if any - for a CV, most are essential */
       /* .social-icon svg { display: none; } */ /* Example: if icons are not needed */
 
-      .contact-links span:not(:last-child)::after { /* Ensure pipes are not shown if they were handled by CSS content before */
-        content: " | "; /* Or simply remove if not desired */
+      .contact-links span:not(:last-child)::after {
+        content: " | ";
         display: inline;
         margin: 0 0.5em;
       }
