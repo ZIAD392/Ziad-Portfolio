@@ -4,6 +4,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Ziad Mahmoud Al-Masry — Project Manager specializing in Odoo ERP implementations, Agile delivery, and stakeholder management. Cairo, Egypt." />
+  <meta name="keywords" content="Odoo, ERP implementation, Project Management, Agile, Scrum, Jira, ClickUp, Stakeholder Management, Risk Management, Change Management, Resource Allocation, Project Charter, Business Process Improvement, Python, Git, HTML, CSS" />
   <title>Ziad Al-Masry - CV</title>
   <style>
     body {
@@ -95,7 +97,6 @@
       flex: 1 1 45%;
     }
 
-    /* New styles for Training & Certifications section */
     .cert-grid {
       display: flex;
       flex-wrap: wrap;
@@ -106,6 +107,13 @@
       flex: 1 1 45%;
       min-width: 300px;
     }
+    @media print {
+      body { background: #fff !important; color: #000 !important; }
+      section { background: transparent !important; box-shadow: none !important; }
+      .social-icon svg { display: none; } /* hide decorative icons */
+      .container { width: 100%; padding: 0; }
+      a::after { content: " (" attr(href) ")"; font-size: 9pt; color: #000; }
+    }
   </style>
 </head>
 
@@ -114,13 +122,16 @@
     <header>
       <h1>Ziad Mahmoud Al-Masry</h1>
       <h4>Project Manager (Odoo ERP • Agile Practitioner • Stakeholder management)</h4>
+      <p class="contact-plain" style="margin:0.4rem 0; font-size:0.95rem; color:#333;">
+        +20 106 820 2083 | ziadmasri2122@gmail.com | Cairo, Egypt | linkedin.com/in/z-masry | github.com/ZIAD392
+      </p>
       <div class="contact-links-wrapper" style="display: flex; justify-content: center; gap: 1rem; width: 100%;">
         <div class="contact-links">
           <span> <a href="tel:+201068202083">+20 106 820 2083</a></span>
           <span>| <a href="mailto:ziadmasri2122@gmail.com">ziadmasri2122@gmail.com</a></span>
           <span>| <a href="https://ziad392.github.io/Ziad-Portfolio/ziad-portfolio.html">View My Portfolio</a></span>
           <span>| <a href="https://www.google.com/maps/place/Cairo,+Cairo+Governorate" style="color:#00142b;">Cairo,
-              Egypt 🇪🇬</a></span>
+              Egypt</a></span>
         </div>
         <div class="contact-links">
           <span class="social-links">
@@ -145,10 +156,9 @@
 
     <section>
       <h2>Professional Summary</h2>
-      <p>Results-driven Project Manager with 3+ years of experience leading end-to-end Odoo ERP implementations in
-        logistics, retail, and education sectors. Skilled in cross-functional team coordination, Agile delivery, and
-        stakeholder communication. Passionate about aligning technology with business goals and driving digital
-        transformation.</p>
+      <p>
+        Project Manager specializing in Odoo ERP implementations with 3+ years of experience leading end-to-end ERP projects across logistics, retail, and education. Proven expertise in project planning, stakeholder management, Agile delivery (Scrum/Kanban), process improvement, and cross-functional team leadership. Delivered multiple full-cycle Odoo implementations with measurable process improvements and on-time delivery.
+      </p>
     </section>
 
     <section>
@@ -163,7 +173,70 @@
 
     <section>
       <h2>Work Experience</h2>
-      <!-- All job entries (omitted for brevity) -->
+
+      <div class="job-entry">
+        <h3>Odoo Project Coordinator – Scando Integrated Solutions <span style="font-weight:normal;">(Dec 2022 – Present)</span></h3>
+        <p>Coordinated end-to-end Odoo ERP implementations, managing teams, stakeholders, and delivery milestones.</p>
+        <ul>
+          <li>Managed 17+ full-cycle Odoo ERP implementations across Egypt, Sudan, Jordan, and Europe, improving client processes and operational efficiency.</li>
+          <li>Authored comprehensive Project Charters defining scope, deliverables, timelines, stakeholder analysis, and roles & responsibilities.</li>
+          <li>Tracked progress using communication plans and regular progress reports to ensure milestone adherence and on-time delivery.</li>
+          <li>Led cross-functional teams and monitored KPIs using Jira, Odoo, and ClickUp to manage tasks, sprints, and releases.</li>
+          <li>Reduced implementation delays through resource allocation optimization, risk mitigation planning, and structured change-control processes.</li>
+        </ul>
+      </div>
+
+      <div class="job-entry">
+        <h3>Content Creator / Video Editor – Odoo School <span style="font-weight:normal;">(Nov 2024 – Present)</span></h3>
+        <p>Produced multimedia learning content to support Odoo education programs and user adoption.</p>
+        <ul>
+          <li>Produced tutorial videos averaging 1.3K views and improved click-through rates by 18% through optimized scripting and editing.</li>
+          <li>Designed instructional content aligned with learning objectives and SEO best practices to increase discoverability.</li>
+          <li>Created LinkedIn content that increased audience engagement and visibility by 45%.</li>
+        </ul>
+      </div>
+
+      <div class="job-entry">
+        <h3>Camp Counselor – Wellspring Egypt <span style="font-weight:normal;">(Jul 2021 – Present, Freelance)</span></h3>
+        <p>Facilitated safe and engaging summer program activities for children.</p>
+        <ul>
+          <li>Planned and led daily activities for groups up to 30 children, ensuring safety and positive participant outcomes.</li>
+        </ul>
+      </div>
+
+      <div class="job-entry">
+        <h3>Tour Guide – Explorers Tourism <span style="font-weight:normal;">(Apr 2021 – May 2025, Freelance)</span></h3>
+        <p>Delivered informative tours and managed on-site logistics.</p>
+        <ul>
+          <li>Conducted guided tours for international groups, delivering historical and cultural context across heritage sites.</li>
+          <li>Researched and prepared tour narratives and coordinated logistics with hotels, transport, and vendors.</li>
+        </ul>
+      </div>
+
+      <div class="job-entry">
+        <h3>Customer Service Agent – Vodafone Egypt <span style="font-weight:normal;">(Oct 2019 – Jun 2021)</span></h3>
+        <p>Provided high-volume customer support and issue resolution.</p>
+        <ul>
+          <li>Handled 80+ customer interactions daily, achieving a 95% satisfaction rate through efficient issue resolution and upselling.</li>
+        </ul>
+      </div>
+
+      <div class="job-entry">
+        <h3>Tele-Sales Agent – Etisalat Egypt <span style="font-weight:normal;">(Aug 2018 – Oct 2019)</span></h3>
+        <p>Generated new sales and maintained CRM records.</p>
+        <ul>
+          <li>Conducted 75+ outbound calls per day and achieved an 18% conversion rate to new contracts.</li>
+          <li>Maintained CRM data and executed follow-ups to close sales opportunities.</li>
+        </ul>
+      </div>
+
+      <div class="job-entry">
+        <h3>Store Keeper – El-Arby Decoration Shop <span style="font-weight:normal;">(Jan 2019 – Apr 2019)</span></h3>
+        <p>Managed inventory and stock control processes.</p>
+        <ul>
+          <li>Maintained accurate stock records and supported inventory audits to reduce discrepancies.</li>
+        </ul>
+      </div>
     </section>
 
     <section>
@@ -182,8 +255,7 @@
             <li>Fundamentals of Sales and Marketing - Coursera, Goldman sachs (2024)</li>
             <li>Introduction to Marketing - Coursera, University of Pennsylvania (2023)</li>
             <li>How to Get Skilled: Introduction to Individual Skills Management (Project-Centered Course) - Coursera,
-              The
-              State University of New York (2023)</li>
+              The State University of New York (2023)</li>
             <li>Google Skills - INJAZ Egypt (2019)</li>
           </ul>
           <strong>Technical & Development:</strong>
@@ -203,6 +275,7 @@
         <div class="cert-column">
           <strong>Project Management & Agile:</strong>
           <ul>
+            <li>Project Planning with AI - Sololern (2025)</li>
             <li>Business Analyst and Project Manager Collaboration - linkedin learning (2025)</li>
             <li>Nuts and Bolts of Business Plans - MIT Open Course Ware (2025)</li>
             <li>CompTIA Project+ - Coursera, Infosec (2025)</li>
@@ -210,6 +283,7 @@
             <li>Diploma in Certified Associate in Project Management - Alison (2025)</li>
             <li>Project Management: Beyond planning and control - Coursera, Politecnico di Milano (2025)</li>
             <li>Project Initiation: Starting a Successful Project - Coursera, Google (2025)</li>
+            <li>ClickUp Novice Certificate Exam - ClickUp University (2025)</li>
             <li>Agile Project Management - HP Life (2025)</li>
             <li>Project Management Foundations - linkedin learning (2025)</li>
             <li>Getting Started as a Project Manager - linkedin learning (2025)</li>
@@ -224,14 +298,14 @@
     </section>
 
     <section>
-      <h2>Skills</h2>
+      <h2>Key Skills & Tools</h2>
+      <p style="margin:0 0 0.6rem 0;">
+        Odoo, ERP implementation, Project Management, Agile (Scrum/Kanban), Stakeholder Management, Project Charter, Risk Management, Resource Allocation, Change Management, Jira, ClickUp, Microsoft Office, Python, Git, HTML, CSS
+      </p>
       <div class="info-grid">
-        <div class="info-item"><strong>Soft Skills:</strong> Communication, Leadership, Time Management, Collaboration,
-          Critical Thinking, Adaptability</div>
-        <div class="info-item"><strong>Technical:</strong> HTML, CSS, Python, Git, Odoo, Jira, ClickUp, Postman, Xmind,
-          Microsoft Office, Ubuntu</div>
-        <div class="info-item"><strong>Languages:</strong> <b>Arabic</b> (Native), <b>English</b> (Advanced – CEFR
-          B2/C1)</div>
+        <div class="info-item"><strong>Soft Skills:</strong> Communication, Leadership, Time Management, Collaboration, Critical Thinking, Adaptability</div>
+        <div class="info-item"><strong>Technical:</strong> HTML, CSS, Python, Git, Odoo, Jira, ClickUp, Postman, Xmind, Microsoft Office, Ubuntu</div>
+        <div class="info-item"><strong>Languages:</strong> <b>Arabic</b> (Native), <b>English</b> (Advanced – CEFR B2/C1)</div>
       </div>
     </section>
 
