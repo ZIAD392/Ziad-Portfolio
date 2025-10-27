@@ -112,7 +112,11 @@
       section { background: transparent !important; box-shadow: none !important; }
       .social-icon svg { display: none; } /* hide decorative icons */
       .container { width: 100%; padding: 0; }
-      a::after { content: " (" attr(href) ")"; font-size: 9pt; color: #000; }
+      /* hide the interactive contact link blocks when printing (keep plain-text contact line) */
+      .contact-links-wrapper,
+      .contact-links { display: none !important; }
+      /* removed automatic URL insertion for printed links to avoid bracketed URLs */
+      /* previously: a::after { content: " (" attr(href) ")"; ... } */
     }
   </style>
 </head>
